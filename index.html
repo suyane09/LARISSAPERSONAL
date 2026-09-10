@@ -284,13 +284,8 @@
   .plan-selection small{ display:block; color:var(--gray-600); margin-bottom:4px; font-size:12px; }
   .plan-selection strong{ font-size:16px; }
   .plan-selection .selection-action{ flex-shrink:0; }
-  .selected-plan-field{ grid-column:1 / -1; padding:14px 16px; border-radius:var(--radius-sm); background:#f7f4ee; border:1px solid var(--gray-200); color:#1a1815 !important; line-height:1.5; overflow-wrap:anywhere; }
-  .selected-plan-field span{ color:#5f5a52 !important; }
-  .selected-plan-field strong{ color:#171512 !important; font-weight:800; }
-  @media(max-width:760px){
-    .selected-plan-field{ width:100%; box-sizing:border-box; display:block; font-size:14px; }
-    .selected-plan-field span, .selected-plan-field strong{ display:inline; }
-  }
+  .selected-plan-field{ grid-column:1 / -1; padding:14px 16px; border-radius:var(--radius-sm); background:#f7f4ee; border:1px solid var(--gray-200); }
+  .selected-plan-field strong{ color:var(--black); }
   @media(max-width:760px){
     .plan-card.selected::after{ top:12px; right:12px; }
     .plan-selection{ flex-direction:column; align-items:stretch; }
@@ -670,6 +665,60 @@
     .selected-plan-field { font-size: 13px; }
     .selected-plan-field strong { font-size: 13px; }
   }
+
+  /* ---------- Final mobile polish ---------- */
+  @media (max-width: 620px){
+    .contact-form{
+      width:100%;
+      max-width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      padding:28px 18px;
+      overflow:visible;
+    }
+    .form-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) !important;
+      width:100%;
+      gap:16px;
+    }
+    .form-field,
+    .form-field.full{
+      width:100%;
+      min-width:0;
+      grid-column:1 / -1;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea{
+      width:100%;
+      min-width:0;
+      font-size:16px;
+      line-height:1.4;
+    }
+    .form-field textarea{ min-height:110px; }
+    .contact-form .form-head h3{ font-size:22px; }
+    .contact-form .form-head p{ font-size:14px; }
+    .selected-plan{
+      width:100%;
+      min-width:0;
+      overflow-wrap:anywhere;
+      word-break:break-word;
+    }
+    .contact-form .btn,
+    .contact-form button[type="submit"]{
+      width:100%;
+      max-width:100%;
+      justify-content:center;
+      white-space:normal;
+    }
+  }
+
+  /* Prevent iOS Safari from auto-zooming focused form controls. */
+  @media (max-width: 620px){
+    input, select, textarea{ font-size:16px !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -784,7 +833,7 @@
     </div>
     <div class="how-grid">
       <div class="how-media">
-        <img src="WhatsApp Image 2026-09-10 at 09.53.55.jpeg" alt="Planejamento de treino">
+        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop" alt="Planejamento de treino">
       </div>
       <div class="steps">
         <div class="step">
@@ -1107,9 +1156,9 @@
         <div class="footer-logo"><span class="logo-badge">E</span>ERIKA LARISSA.</div>
         <p>Consultoria e acompanhamento personalizado para quem busca treinar com estratégia, orientação e propósito.</p>
         <div class="social-row">
-          <a href="https://www.instagram.com/erikalarissapersonal" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="https://wa.me/5582996684140" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +55 82 9668-4140"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
-          
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Mensagem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+          <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
@@ -1121,6 +1170,14 @@
           <li><a href="#resultados">Resultados</a></li>
           <li><a href="#feedbacks">Feedbacks</a></li>
           <li><a href="#duvidas">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Contato</div>
+        <ul>
+          <li>@erikalarissapersonal</li>
+          <li>WhatsApp direto</li>
+          <li>contato@erikalarissapersonal.com</li>
         </ul>
       </div>
     </div>
